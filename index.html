@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <head>
+  	<script src="http://d3js.org/d3.v3.min.js"></script>
+  </head>
+  <body>
+<button onclick="plotData()">
+        Plot
+      </button>
+    <div id="plotData"></div>
+
+    <script>
+    var width = 1000,
+        height = 500,
+        topMargin = 30,
+        radius = Math.min(width, height - topMargin) / 2,
+        labelRadius = 150,
+        transitionTime = 2000;
+
+
+    var svg = d3.select("body").append("svg")
+                               .attr("width", width)
+                               .attr("height", height)
+                               .append("g")
+                               .attr("transform", "translate(" + width / 2 + "," + (height) / 2  + ")");
+                             
+    
+
+    function plotData(){ 
+      console.log("hi")
+      var removeText = d3.select("svg").selectAll("text").remove()
+      
+      var textbox = d3.select("svg").append("text").attr("x", 100)
+                                                   .attr("y", 100)
+                                                   .text("hi")
+                                                   .attr("font-size", "25px")
+
+    } 
+    // chart
+
+ 
+
+
+
+    </script>
+  </body>
+</html>
